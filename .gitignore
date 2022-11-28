@@ -1,0 +1,8 @@
+/.env
+/hardhat.config.js
+/stordem/public
+/stordem/node_modules
+/node_modules
+/cache
+/artifacts
+/test
