@@ -9,11 +9,12 @@ import cors from "cors";
 const Dstorage = require("../Dstorage.json");
 export let Buffer = require("buffer").Buffer;
 export let process = require("process/browser");
-const projectId = process.projectId;
-const projectSecret = process.projectId;
+const projectId = '2I9pFSAD08o7bYa3XqY2qekLJXf';
+const projectSecret = 'eb8c935ffd5f6d3fe4f8db672608b1ac';
 const DeepStorage = () => {
 
-    const contractAddress = "0x126D6Ea9ba3D0968c5BF49830c8BbcEEED846F60"
+    // const contractAddress = "0x126D6Ea9ba3D0968c5BF49830c8BbcEEED846F60"
+    const contractAddress = ""
     const [errorMessage, setError] = useState(null);
     const [defaultAccount, setDefaultAccount] = useState(null);
     const [Provider, setProvider] = useState(null);
@@ -38,7 +39,6 @@ const DeepStorage = () => {
         const account = await provider.request({ method: "eth_accounts" });
         if (account.length > 0) {
             setDefaultAccount(account[0]);
-
         } else {
             console.log("No acct");
         }
@@ -53,6 +53,7 @@ const DeepStorage = () => {
             const account = await provider.request({ method: "eth_requestAccounts" });
             if (account.length > 0) {
                 setDefaultAccount(account[0]);
+
             } else {
                 console.log("No acct")
             }
@@ -101,6 +102,9 @@ const DeepStorage = () => {
     const Payment = async (e) => {
         e.preventDefault();
         await connectEthers();
+        await storageContract.payment();
+        const paid = await storageContract.paidUser();
+        setPaidUsers(paid);
     }
 
     return (
@@ -119,10 +123,16 @@ const DeepStorage = () => {
             <div><button onClick={Payment} id="Pay">Make Payment</button></div>
             <div><button onClick={showFiles}>Hello,They will show here!!(GetStuff)
             </button>
-                {storageValue.map((Files, index) => (
-                    <div key={index}>{Files.map((afileInfo, index) => (<div key={index}>{String(afileInfo.type)}</div>)
-                    )}</div>
-                ))}
+                <ol>
+                    {storageValue.map((Files, index) => {
+                        if (String(Files.saver).toLowerCase() === defaultAccount) {
+                            return (<div key={index}><li>{String(Files.filePath)}</li></div>)
+                        }
+                        return null;
+                    }
+
+                    )}
+                </ol>
             </div>
 
         </div >
