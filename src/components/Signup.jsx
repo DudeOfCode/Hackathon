@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 import PropTypes from "prop-types";
 
 function Signup() {
@@ -41,12 +42,7 @@ function Signup() {
   function Butt({ isDisabled }) {
     return <input type="submit" value="Sign up" disabled={isDisabled} />;
   }
-//   function signIn(e) {
-//   e.preventDefault();
-// signInWithRedirect(auth, provider);
-   
-  
-//   }
+
   Butt.defaultProps = {
     isDisabled: "false",
   };
@@ -59,8 +55,8 @@ function Signup() {
       <div className="container" >
       
 <div className="header">
-  
-<h1>PROTECT YOUR DATA WITH US.</h1>
+<h1 style={{'textTransform': 'Capitalize'}}>welcome to the better side of data storage.</h1>
+
       <sub><b>230,100.04</b> People trust us!</sub>
 </div>
 
@@ -337,7 +333,7 @@ function Signup() {
         {/* <button onClick={signIn}>Or Sign in with Google</button> */}
 
         <em>
-          Already signed Up? <a href="/" >Login</a>
+          Already Signed Up? <a href="/Upload" >Login</a>
         </em>
       </form>
     </div>

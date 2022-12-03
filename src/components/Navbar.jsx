@@ -10,7 +10,7 @@ function Navbar() {
         <nav>
           <Link to="/" className="home">
             {" "}
-            <div className="img-menu">
+            <div className="img-logo">
             <img
               src="https://cdn-icons-png.flaticon.com/128/5448/5448104.png"
               alt="logo"
@@ -56,7 +56,7 @@ function Navbar() {
             <Link to="/">How it works</Link>
           </li>
           <li>
-            <Link to="/">Careers</Link>
+            <Link to="/DeepStorage">Store data</Link>
           </li>
           <li>
             <Link to="/signup">Sign up</Link>

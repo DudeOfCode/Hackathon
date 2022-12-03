@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Upload from "./components/Upload";
 import Signup from "./components/Signup";
 import Footer from "./components/Footer";
+import DeepStorage from "./components/DeepStorage";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/Sign in" />
           <Route path="/Upload" element={<Upload />} />
-          <Route path="/Sign up" element={<Signup />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/DeepStorage" element={<DeepStorage />} />
         </Routes>
         
       </div>

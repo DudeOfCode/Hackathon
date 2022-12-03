@@ -1,7 +1,8 @@
 import React from "react";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-
+import hero from './tools/hero.png';
+import herosec from './tools/herosec.png';
 import ReactTypingEffect from "react-typing-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -9,50 +10,6 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 const element = (
   <FontAwesomeIcon style={{ color: "white" }} icon={faAngleDown} />
 );
-// import { Slide } from 'react-slideshow-image'
-
-// import 'react-slideshow-image/dist/styles.css'
-// import "react-slideshow-image/dist/styles.css";
-
-// const slideImages = [
-//   {
-//     url: "https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?auto=compress&cs=tinysrgb&w=600",
-//     caption: "Store News updates",
-//   },
-//   {
-//     url: "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600",
-//     caption: "Store Videos",
-//   },
-//   {
-//     url: "https://images.pexels.com/photos/357514/pexels-photo-357514.jpeg?auto=compress&cs=tinysrgb&w=600",
-//     caption: "Store files",
-//   },
-//   {
-//     url: "https://images.pexels.com/photos/3861976/pexels-photo-3861976.jpeg?auto=compress&cs=tinysrgb&w=600",
-//     caption: "Private data",
-//   },
-// ];
-
-// function Slideshow() {
-//   return (
-//     <div className="slideshow">
-//       <div className="slideshowSlider">
-//       <Slide>
-//          {slideImages.map((slideImage, index)=> (
-//             <div className="each-slide" key={index}>
-//               <div style={{'backgroundImage': `url(${slideImage.url})`}}>
-//                 <span>{slideImage.caption}</span>
-//               </div>
-//             </div>
-//           ))}
-//         </Slide>
-
-//       </div>
-//     </div>
-//   );
-// }
-
-// ge
 
 const benefits = [
   {
@@ -74,7 +31,7 @@ const benefits = [
     h2: "Decentralized",
     url: "https://img.icons8.com/material-sharp/512/decentralized-network.png",
     alt: "decentralized",
-    p: " Keeping data decentralized simply means there is no third partybetween you and data. It also means it can not be tampered with So you can access it anytime you want.",
+    p: " Keeping data decentralized simply means there is no third party between you and data This makes it safe and secure. ",
   },
   {
     id: 4,
@@ -100,13 +57,14 @@ export default function Hero() {
         </div>
         <div className="img">
           <img
+          src={hero}
             alt="hero img"
             className="hero-img"
           />
         </div>
       </div>
 
-      {/* <Slideshow /> */}
+   <div className="slideshow"></div>
       <div className="main">
         <h2>The decentralized way to store data is here</h2>
         <div className="typewriter">
@@ -116,6 +74,8 @@ export default function Hero() {
           </p>
         </div>
       </div>
+      <div className="about-container">
+   
       <div className="about-us">
         <AnimationOnScroll animateIn="animate__flipInX">
           <h2>Who we are</h2>
@@ -152,15 +112,27 @@ export default function Hero() {
           you secure your future by storing your data
         </p>
       </div>
+      <div className="hero-image">
+  <img src={herosec} alt="hero-sec" className="hero-sec"/>
+</div>
+      </div>
       <div className="benefits-container">
         <div className="benefits">
-          <div>
+        <div>
+                  <h2>Why Choose Us?</h2>
+                </div>
+          <div className="card-container">
+          
             {benefits.map((item) => {
               return(
-              <div className="card" key={item.id}><div className="img-card">
+              <div className="card" key={item.id}>
+               
+                <div className="img-card">
                   <img src={item.url} alt={item.alt} />
                 </div>
-                <h2>{item.h2}</h2>
+              <AnimationOnScroll animateIn="animate__flipInY">
+              <h2 style={{'fontSize': '1em'}}>{item.h2}</h2>
+              </AnimationOnScroll>
                 <p>{item.p}</p>
               </div>
               );
@@ -173,7 +145,7 @@ export default function Hero() {
       <div className="IPFs">
         <AnimationOnScroll animateIn="animate__slideInLeft">
           {" "}
-          <h1>Curious About IPFs?</h1>
+          <h2>Curious About IPFs?</h2>
         </AnimationOnScroll>
         <p>
           IPFs is simply a <b>decentralized storage network</b>.

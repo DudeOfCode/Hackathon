@@ -4,9 +4,9 @@ function Footer() {
   return (
     <div>
           <footer>
-    <div class="log">
+    {/* <div class="log"> */}
       {/* <img src="" alt="" /> */}
-    </div>
+    {/* </div>  */}
     <div>
       
       <ul>
