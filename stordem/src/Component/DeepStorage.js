@@ -9,8 +9,8 @@ import cors from "cors";
 const Dstorage = require("../Dstorage.json");
 export let Buffer = require("buffer").Buffer;
 export let process = require("process/browser");
-const projectId = '2I9pFSAD08o7bYa3XqY2qekLJXf';
-const projectSecret = 'eb8c935ffd5f6d3fe4f8db672608b1ac';
+const projectId = '';
+const projectSecret = '';
 const DeepStorage = () => {
 
     const contractAddress = "0x126D6Ea9ba3D0968c5BF49830c8BbcEEED846F60"
