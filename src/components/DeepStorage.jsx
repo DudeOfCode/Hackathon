@@ -100,7 +100,7 @@ const DeepStorage = () => {
     const value = await storageContract.displayFile();
     setStorageValue(value);
   };
-  const Payment = async () => {
+  const Payment = async (e) => {
     e.preventDefault();
     await connectEthers();
     await storageContract.payment();

@@ -88,7 +88,7 @@ function Form() {
       
 
         <Butt isDisabled={Button} />
-        {/* <button onClick={signIn}>Or Sign in with Google</button> */}
+       
 
         <em>
           Don't have an account? <a href="/signup" >Sign up</a>

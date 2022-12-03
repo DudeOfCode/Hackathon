@@ -64,7 +64,7 @@ export default function Hero() {
         </div>
       </div>
 
-   <div className="slideshow"></div>
+   
       <div className="main">
         <h2>The decentralized way to store data is here</h2>
         <div className="typewriter">
