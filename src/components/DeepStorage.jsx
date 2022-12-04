@@ -3,10 +3,10 @@ import ReactTypingEffect from "react-typing-effect";
 import { ethers } from "ethers";
 import { create } from "ipfs-http-client";
 // import cors from "cors";
-const ipfsUpload = new create("https://ipfs.infura.io:5001/api/v0");
-const ipfsUploads = new create("http://localhost:5001");
+//const ipfsUpload = new create("https://ipfs.infura.io:5001/api/v0");
+//const ipfsUploads = new create("http://localhost:5001");
 
-const webpack = require("webpack");
+//const webpack = require("webpack");
 const Dstorage = require("../ERC20ABI.json");
 export let Buffer = require("buffer").Buffer;
 export let process = require("process/browser");
